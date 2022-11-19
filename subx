@@ -12,7 +12,7 @@ if [[ -f "all-$1.txt" ]]  #check is file exist(downloded)
 then
 echo "Check alive subdomains"|lolcat
 for sub in $(cat all-$1.txt);do
-if [[ $(ping  -c 2 -i 0.5 -w 1  $sub 2>/dev/null)  ]] || [[ $(ping  -c 2 -i 0.5 -w 1  $sub.com 2>/dev/null)  ]] #check Alive Subdomains
+if [[ $(ping  -c 2 -i 0.5 -w 1  $sub 2>/dev/null)  ]]  #check Alive Subdomains
 then
 echo "$sub " >> alive-sub.txt 
 else
