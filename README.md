@@ -21,4 +21,26 @@ how to use:
 
 $ subx domain                   #without .com 
 
-ex. subx google
+┌──(kali💀kali)-[~]
+└─# subx google
+ ____        _      __  __ 
+/ ___| _   _| |__   \ \/ / 
+\___ \| | | | '_ \   \  /  
+ ___) | |_| | |_) |  /  \  
+|____/ \__,_|_.__/  /_/\_\ 
+                           
+using subfinder by:hunter
+
+        _     __ _         _         
+____  _| |__ / _(_)_ _  __| |___ _ _ 
+(_-< || | '_ \  _| | ' \/ _  / -_) '_|
+/__/\_,_|_.__/_| |_|_||_\__,_\___|_| v2
+
+                projectdiscovery.io
+
+[WRN] Use with caution. You are responsible for your actions
+[WRN] Developers assume no liability and are not responsible for any misuse or damage.
+[WRN] By using subfinder, you also agree to the terms of the APIs used.
+
+[INF] Enumerating subdomains for google
+
