@@ -1,0 +1,34 @@
+#!/bin/bash
+#Automate subdomain finder & check alive sub 
+#Using subfinder tool 
+#By:hunter
+figlet "Sub X "|lolcat
+echo "using subfinder by:hunter"
+cd ~/Desktop/subdomain/           #path to save files
+mkdir $1 && cd $1
+subfinder -d $1 |tee all-$1.txt
+finder () {
+if [[ -f "all-$1.txt" ]]  #check is file exist(downloded)
+then
+echo "Check alive subdomains"|lolcat
+for sub in $(cat all-$1.txt);do
+if [[ $(ping  -c 2 -i 0.5 -w 1  $sub 2>/dev/null)  ]] || [[ $(ping  -c 2 -i 0.5 -w 1  $sub.com 2>/dev/null)  ]] #check Alive Subdomains
+then
+echo "$sub " >> alive-sub.txt 
+else
+echo "$sub 404"          #dead subdomains
+fi
+done
+else
+echo "Error:File Not Found \n>try again"
+fi
+echo "Done"
+}
+finder $1
+echo "----------------------- Alive subdomains ------------------------"|lolcat
+cat alive-sub.txt|lolcat
+wc=$(wc -l alive-sub.txt|cut -d ' ' -f 1)
+echo "Found $wc subdomain alive"
+
+
+
